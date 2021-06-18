@@ -66,7 +66,7 @@ function encode() {
 
     setTimeout(function() {
         var linkEncodeFile = $.ajax({
-            url: 'https://052f89602639.ngrok.io/api/encode',
+            url: 'https://6a28c59a8025.ngrok.io/api/encode',
             type: 'POST',
             async: false,
             contentType: 'application/json',
@@ -81,7 +81,7 @@ function encode() {
             }
         }).responseText;
         document.getElementById('encode-loading').style.cssText = 'display: none;';
-        window.location.href = 'https://052f89602639.ngrok.io' + linkEncodeFile;
+        window.location.href = 'https://6a28c59a8025.ngrok.io' + linkEncodeFile;
     }, 10);
 
 }
@@ -102,7 +102,7 @@ function decode() {
     }
     setTimeout(function() {
         var link = $.ajax({
-            url: 'https://052f89602639.ngrok.io/api/decode',
+            url: 'https://6a28c59a8025.ngrok.io/api/decode',
             type: 'POST',
             async: false,
             contentType: 'application/json',
@@ -117,7 +117,7 @@ function decode() {
         }).responseText;
         document.getElementById('decode-loading').style.cssText = 'display: none;';
         try {
-            window.location.href = 'https://052f89602639.ngrok.io' + link;
+            window.location.href = 'https://6a28c59a8025.ngrok.io' + link;
         } catch (err) {
             alert("Cannot decode file or your key is wrong.");
         }
